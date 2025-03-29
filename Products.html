@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Ramdev Tea Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-opacity-80 bg-gray-900 text-white py-4 px-6 flex items-center justify-between z-50">
+        <!-- Logo & Name -->
+        <a href="homepage.html" class="flex items-center">
+            <img src="images/logo.JPG" alt="Ramdev Tea Logo" class="h-8 w-8 square-full">
+            <span class="text-xl font-bold ml-2">Ramdev Tea Company</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation Links (Hidden in Mobile, Shown in Desktop) -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="homepage.html" class="hover:text-green-500 transition">Home</a></li>
+            <li><a href="products.html" class="hover:text-green-500 transition">Products</a></li>
+            <li><a href="contact.html" class="hover:text-green-500 transition">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <ul id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-gray-900 text-white text-center py-3 z-50">
+        <li><a href="homepage.html" class="block py-2 hover:bg-green-700">Home</a></li>
+        <li><a href="products.html" class="block py-2 hover:bg-green-700">Products</a></li>
+        <li><a href="contact.html" class="block py-2 hover:bg-green-700">Contact Us</a></li>
+    </ul>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a menu item
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <div class="bg-gray-100 p-6 rounded-lg text-center pt-20">
+        <h1 class="text-2xl font-bold">Our Tea Products</h1>
+    </div>
+
+    <section class="py-12 px-6 bg-white">
+        
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
+
+            <!-- Example Product 1 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <img src="images\sampavatipouch.png" alt="Assam Tea" class="w-40 h-50 object-cover rounded-lg center mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Sampavaty</h3>
+                <p class="text-gray-600">Strong & aromatic tea</p>
+                <p class="font-bold mt-2">₹250/kg</p>
+                <a href="https://wa.me/917350794965"
+                    class="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded">Order Now</a>
+            </div>
+
+            <!-- Example Product 2 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <img src="images\ramdevteapouchrs10.png" alt="Assam Tea" class="w-40 h-50 object-cover rounded-lg center mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Ramdev Elaichi</h3>
+                <p class="text-gray-600">Healthy & refreshing</p>
+                <p class="font-bold mt-2">₹300/kg</p>
+                <a href="https://wa.me/917350794965"
+                    class="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded">Order Now</a>
+            </div>
+
+            <!-- Example Product 3 -->
+            <div class="bg-gray-100 p-6 rounded-lg text-center">
+                <img src="images\Vikasgoldtea250gPOUCH.jpg" alt="Assam Tea" class="w-40 h-50 object-cover rounded-lg center mx-auto">
+                <h3 class="text-xl font-semibold mt-4">MG Vikas</h3>
+                <p class="text-gray-600">Spiced tea blend</p>
+                <p class="font-bold mt-2">₹350/kg</p>
+                <a href="https://wa.me/917350794965"
+                    class="mt-3 inline-block bg-green-600 text-white px-4 py-2 rounded">Order Now</a>
+            </div>
+
+            <!-- Add more products in similar format -->
+
+        </div>
+    </section>
+
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <p>&copy; 2025 Your Tea Brand. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
