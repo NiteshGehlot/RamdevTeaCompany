@@ -106,7 +106,7 @@
         <header class="relative flex items-center justify-center justify-between text-center bg-cover bg-center"
         style="background-image: url('bg-5.png');">
 
-            <div class="text-center justify-center center p-8 rounded-lg max-w-3xl">
+            <div class="text-center justify-center center p-8 rounded-lg max-w-3xl" style="margin-left: 20%;">
                 <p class="text-center justify-center text-lg drop-shadow-md">
                     We provide high-quality tea sourced from the finest plantations. Our commitment to quality ensures
                     the best taste and aroma. Started in 2000, “Ramdev Tea Company” is a tea manufacturing brand located
@@ -138,10 +138,9 @@
                 <p class="mt-2 text-gray-600">High-quality red product with premium features.</p>
                 <div class="mt-4 flex justify-center gap-3">
                     <div class="variant-option bg-white shadow-md" onclick="updatePrice('red', 100, this)">100gm</div>
-                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('red', 200, this)">200gm</div>
-                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('red', 500, this)">500gm</div>
+                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('red', 250, this)">250gm</div>
                 </div>
-                <p id="red-price" class="mt-4 text-lg font-semibold text-gray-900">Price: ₹50</p>
+                <p id="red-price" class="mt-4 text-lg font-semibold text-gray-900">Price: ₹60</p>
                 <button
                     class="mt-5 px-6 py-3 bg-red-600 text-white font-medium rounded-lg shadow-md hover:bg-red-700 transition">Buy
                     Now</button>
@@ -156,8 +155,7 @@
                 <p class="mt-2 text-gray-600">Elegant blue product designed for professionals.</p>
                 <div class="mt-4 flex justify-center gap-3">
                     <div class="variant-option bg-white shadow-md" onclick="updatePrice('blue', 100, this)">100gm</div>
-                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('blue', 200, this)">200gm</div>
-                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('blue', 500, this)">500gm</div>
+                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('blue', 250, this)">250gm</div>
                 </div>
                 <p id="blue-price" class="mt-4 text-lg font-semibold text-gray-900">Price: ₹60</p>
                 <button
@@ -175,12 +173,12 @@
                 <div class="mt-4 flex justify-center gap-3">
                     <div class="variant-option bg-white shadow-md" onclick="updatePrice('yellow', 100, this)">100gm
                     </div>
-                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('yellow', 200, this)">200gm
+                    <div class="variant-option bg-white shadow-md" onclick="updatePrice('yellow', 250, this)">250gm
                     </div>
                     <div class="variant-option bg-white shadow-md" onclick="updatePrice('yellow', 500, this)">500gm
                     </div>
                 </div>
-                <p id="yellow-price" class="mt-4 text-lg font-semibold text-gray-900">Price: ₹55</p>
+                <p id="yellow-price" class="mt-4 text-lg font-semibold text-gray-900">Price: ₹50</p>
                 <button
                     class="mt-5 px-6 py-3 bg-yellow-500 text-white font-medium rounded-lg shadow-md hover:bg-yellow-600 transition">Buy
                     Now</button>
@@ -199,9 +197,9 @@
     <script>
         function updatePrice(product, weight, element) {
             const priceMap = {
-                red: { 100: 50, 200: 90, 500: 200 },
-                blue: { 100: 60, 200: 110, 500: 250 },
-                yellow: { 100: 55, 200: 100, 500: 220 }
+                red: { 100: 60, 200: 125, 500: 200 },
+                blue: { 100: 60, 250: 150, 500: 250 },
+                yellow: { 100: 50, 250: 120, 500: 240 }
             };
             document.getElementById(`${product}-price`).textContent = "Price: ₹" + priceMap[product][weight];
             // Remove 'selected' class from all variant options inside the clicked product's container
