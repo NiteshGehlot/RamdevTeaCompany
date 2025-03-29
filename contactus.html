@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ramdev Tea Company</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <nav
+        class="fixed top-0 left-0 w-full bg-opacity-80 bg-gray-900 text-white py-4 px-6 flex items-center justify-between z-50">
+        <!-- Logo & Name -->
+        <a href="index.html" class="flex items-center">
+            <img src="images/logo.JPG" alt="Ramdev Tea Logo" class="h-8 w-8 square-full">
+            <span class="text-xl font-bold ml-2">Ramdev Tea Company</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+            ☰
+        </button>
+
+        <!-- Navigation Links (Hidden in Mobile, Shown in Desktop) -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a href="index.html" class="hover:text-green-500 transition">Home</a></li>
+            <li><a href="products.html" class="hover:text-green-500 transition">Products</a></li>
+            <li><a href="contactus.html" class="hover:text-green-500 transition">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <ul id="mobileMenu" class="hidden fixed top-16 left-0 w-full bg-gray-900 text-white text-center py-3 z-50">
+        <li><a href="index.html" class="block py-2 hover:bg-green-700">Home</a></li>
+        <li><a href="products.html" class="block py-2 hover:bg-green-700">Products</a></li>
+        <li><a href="contact.html" class="block py-2 hover:bg-green-700">Contact Us</a></li>
+    </ul>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuItems = document.querySelectorAll('.menu-item');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a menu item
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-green-700 mb-6">Contact Us</h2>
+            <p class="text-gray-600 text-lg">We'd love to hear from you! Reach out to us for inquiries.</p>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+
+            <!-- Contact Info -->
+            <div class="bg-white p-8 shadow-md rounded-lg">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Contact Details</h3>
+
+                <p class="text-gray-600"><strong>Address:</strong>
+                    Pune, Maharashtra, India
+                </p>
+
+                <p class="text-gray-600 mt-3"><strong>Phone:</strong>
+                    <a href="tel:+919876543210" class="text-green-600 hover:underline">+91 78756 90651</a>
+                </p>
+
+                <p class="text-gray-600 mt-3"><strong>Email:</strong>
+                    <a href="mailto:ramdevteacompany@yahoo.com"
+                        class="text-green-600 hover:underline">ramdevteacompany@yahoo.com</a>
+                </p>
+
+                <p class="text-gray-600 mt-3"><strong>Business Hours:</strong>
+                    Mon - Sun: 9:00 AM - 6:00 PM
+                </p>
+
+                <!-- Google Map -->
+                <div class="mt-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.918524912937!2d73.94732587465143!3d18.487349370189232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e9e372714a0d%3A0xd2466ea493ed0ab7!2sRamdev%20Tea%20Company!5e0!3m2!1sen!2sin!4v1743243985662!5m2!1sen!2sin"
+                        width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="bg-white p-8 shadow-md rounded-lg">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Send Us a Message</h3>
+
+                <form action="https://formspree.io/f/xyzedjrz" method="post">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Your Name</label>
+                        <input type="text" name="name" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300 outline-none">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Email</label>
+                        <input type="email" name="email" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300 outline-none">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-1">Message</label>
+                        <textarea name="message" rows="4" required
+                            class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-green-300 outline-none"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-green-600 text-white py-3 rounded-lg shadow-md hover:bg-green-700 transition">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
